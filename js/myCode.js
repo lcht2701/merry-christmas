@@ -30,7 +30,7 @@ function agree() {
     } else {
       alert("Bạn hứa rùiii đó ngheeee :3");
       location.assign(
-        "https://www.youtube.com/watch?v=2AfaQ6qsLbw&ab_channel=FORESTSTUDIO"
+        "https://www.youtube.com/watch?v=Q_yuO8UNGmY"
       );
     }
   } else {
