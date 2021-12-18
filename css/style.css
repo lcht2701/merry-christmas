@@ -5,21 +5,139 @@ body {
   background-size: cover;
 }
 
-.info {
-  display: flex-box;
+html {
+  scroll-behavior: smooth;
+}
+
+a{
+  text-decoration: none;
+}
+
+#heading,
+#arrow,
+#arrow1,
+#arrow2,
+#arrow3,
+#arrow4,
+#main {
+  display: block;
   align-items: center;
   text-align: center;
-  height: auto;
-  margin: 10% 0;
+  min-height: 100vh;
+  padding: 14% 13% 14% 13%;
   font-family: "Comic Sans MS", cursive, sans-serif;
 }
-.info img {
-  width: 10%;
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
 }
-.info h1 {
+
+:root {
+  --color-primary: #f6aca2;
+  --color-secondary: #f49b90;
+  --color-tertiary: #f28b7d;
+  --color-quaternary: #f07a6a;
+  --color-quinary: #ee6352;
+  /*
+  --color-primary: #5192ED;
+  --color-secondary: #69A1F0;
+  --color-tertiary: #7EAEF2;
+  --color-quaternary: #90BAF5;
+  --color-quinary: #A2C4F5;
+  */
+}
+
+.text_shadows {
+  text-shadow: 3px 3px 0 var(--color-secondary), 6px 6px 0 var(--color-tertiary),
+    9px 9px var(--color-quaternary), 12px 12px 0 var(--color-quinary);
+  font-family: bungee, sans-serif;
+  font-weight: 400;
+  text-transform: uppercase;
+  font-size: calc(2rem + 5vw);
+  text-align: center;
+  margin: 0;
+  color: var(--color-primary);
+  /*color: transparent;
+  background-color: white;
+  background-clip: text;*/
+  animation: shadows 1.2s ease-in infinite, move 1.2s ease-in infinite;
+  letter-spacing: 0.4rem;
+}
+
+@keyframes shadows {
+  0% {
+    text-shadow: none;
+  }
+  10% {
+    text-shadow: 3px 3px 0 var(--color-secondary);
+  }
+  20% {
+    text-shadow: 3px 3px 0 var(--color-secondary),
+      6px 6px 0 var(--color-tertiary);
+  }
+  30% {
+    text-shadow: 3px 3px 0 var(--color-secondary),
+      6px 6px 0 var(--color-tertiary), 9px 9px var(--color-quaternary);
+  }
+  40% {
+    text-shadow: 3px 3px 0 var(--color-secondary),
+      6px 6px 0 var(--color-tertiary), 9px 9px var(--color-quaternary),
+      12px 12px 0 var(--color-quinary);
+  }
+  50% {
+    text-shadow: 3px 3px 0 var(--color-secondary),
+      6px 6px 0 var(--color-tertiary), 9px 9px var(--color-quaternary),
+      12px 12px 0 var(--color-quinary);
+  }
+  60% {
+    text-shadow: 3px 3px 0 var(--color-secondary),
+      6px 6px 0 var(--color-tertiary), 9px 9px var(--color-quaternary),
+      12px 12px 0 var(--color-quinary);
+  }
+  70% {
+    text-shadow: 3px 3px 0 var(--color-secondary),
+      6px 6px 0 var(--color-tertiary), 9px 9px var(--color-quaternary);
+  }
+  80% {
+    text-shadow: 3px 3px 0 var(--color-secondary),
+      6px 6px 0 var(--color-tertiary);
+  }
+  90% {
+    text-shadow: 3px 3px 0 var(--color-secondary);
+  }
+  100% {
+    text-shadow: none;
+  }
+}
+
+@keyframes move {
+  0% {
+    transform: translate(0px, 0px);
+  }
+  40% {
+    transform: translate(-12px, -12px);
+  }
+  50% {
+    transform: translate(-12px, -12px);
+  }
+  60% {
+    transform: translate(-12px, -12px);
+  }
+  100% {
+    transform: translate(0px, 0px);
+  }
+}
+
+img {
+  width: 16%;
+}
+h1,
+h2,
+h3 {
   text-transform: uppercase;
   color: #ff7675;
-  font-size: 60px;
 }
 
 @-webkit-keyframes snowflakes-fall {
@@ -143,7 +261,7 @@ body {
   animation-delay: 4s, 2.5s;
 }
 @import url(https://fonts.googleapis.com/css?family=Raleway:400);
-.info button {
+#main button {
   font-family: "Raleway", Arial, sans-serif;
   z-index: 1;
   border: none;
@@ -151,7 +269,7 @@ body {
   border-radius: 5px;
   color: #fff;
   cursor: pointer;
-  width: 300px;
+  width: 330px;
   height: 80px;
   padding: 0px 30px;
   display: inline-block;
@@ -171,7 +289,7 @@ body {
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
-.info button:before {
+#main button:before {
   opacity: 0;
   content: "";
   position: absolute;
@@ -186,7 +304,7 @@ body {
   -webkit-transform: translateY(100%);
   transform: translateY(100%);
 }
-.info button:after {
+#main button:after {
   position: absolute;
   top: 0px;
   bottom: 0px;
@@ -196,13 +314,13 @@ body {
   content: "";
   border-radius: inherit;
 }
-.info button:hover,
-.info button.hover {
+#main button:hover,
+#main button.hover {
   background-color: #ea8685;
   color: #ffffff;
 }
-.info button:hover:before,
-.info button.hover:before {
+#main button:hover:before,
+#main button.hover:before {
   -webkit-transform: translateY(0%);
   transform: translateY(0%);
   opacity: 0.25;
