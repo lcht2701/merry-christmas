@@ -332,3 +332,11 @@ video {
   width: 85%;
   border-radius: 20px;
 }
+
+.icon-arrow{
+  font-size: 35px;
+}
+
+.icon-arrow h3:hover{
+  opacity: 0.7;
+}

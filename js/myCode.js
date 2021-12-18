@@ -13,10 +13,10 @@ var answer;
 var time;
 var text = "Bạn điền thiếu";
 function agree() {
-  fullName = prompt("Họ và tên của bạn đáng iuuu đây là gì?");
-  time = prompt("Bạn muốn đi cùng tôi lúc mấy giờ?");
+  fullName = prompt("Vậy thì bạn đang ở đây tên gì nhỉ?");
+  time = prompt("Tôi có thể đón bạn lúc mấy giờ? (hh:mm)");
   answer = prompt(
-    "Bạn đã chắc chắn với câu trả lời của bạn chưa? (YES/NO - T chỉ muốn chắc chắn lại thuiii đóooooooo!!!"
+    "'YES' OR 'No' - Bạn đã chắc chắn chưaa? Trả lời rồi là không có được rút lại đó nha! Mình báo cảnh sát thiệt đó 👉👈 🥺"
   );
   if (
     answer.search("YE") >= 0 ||
@@ -28,12 +28,12 @@ function agree() {
     } else if (time == null || time == "") {
       alert("Bạn nhập thiếu thời gian rùiii :<");
     } else {
-      alert("Bạn hứa rùiii đó ngheeee :3");
+      alert("Mình sẽ đón bạn " + fullName + " vào lúc " + time + " đó nha! CAN'T WAIT TO SEE YOU 😊");
       location.assign(
         "https://www.youtube.com/watch?v=Q_yuO8UNGmY"
       );
     }
   } else {
-    alert("Bạn thực sự hỏng múnn đi với tuiii saoo :<<");
+    alert("BẠN ĐỪNG NHƯ VẬY MÀ 😣 MÌNH BUỒN LẮM Á 😢");
   }
 }
