@@ -8,16 +8,17 @@ btn.addEventListener("click", () => {
   btn.style.transform = `translate(${randX}px, ${randY}px)`;
 });
 
-var fullName;s
+var fullName;
 var answer;
 var time;
-var text = "Bạn điền thiếu";
+
 function agree() {
-  fullName = prompt("Vậy thì bạn đang ở đây tên gì nhỉ?");
+  fullName = prompt("Vậy thì bạn đây tên là gì nhỉ?");
   time = prompt("Tôi có thể đón bạn lúc mấy giờ? (hh:mm)");
   answer = prompt(
-    "'YES' OR 'No' - Bạn đã chắc chắn chưaa? Trả lời rồi là không có được rút lại đó nha! Mình báo cảnh sát thiệt đó 👉👈 🥺"
+    "'YES' OR 'No' - Bạn đã chắc chắn chưaa? Trả lời rồi là không có được rút lại đó nha! Mình báo cảnh sát thật đó 👉👈 🥺"
   );
+  
   if (
     answer.search("YE") >= 0 ||
     answer.search("ye") >= 0 ||
@@ -28,10 +29,14 @@ function agree() {
     } else if (time == null || time == "") {
       alert("Bạn nhập thiếu thời gian rùiii :<");
     } else {
-      alert("Mình sẽ đón bạn " + fullName + " vào lúc " + time + " đó nha! CAN'T WAIT TO SEE YOU 😊");
-      location.assign(
-        "https://www.youtube.com/watch?v=Q_yuO8UNGmY"
+      alert(
+        "Mình sẽ đón bạn " +
+          fullName +
+          " vào lúc " +
+          time +
+          " đó nha! CAN'T WAIT TO SEE YOU 😊"
       );
+      location.assign("https://www.youtube.com/watch?v=Q_yuO8UNGmY");
     }
   } else {
     alert("BẠN ĐỪNG NHƯ VẬY MÀ 😣 MÌNH BUỒN LẮM Á 😢");
