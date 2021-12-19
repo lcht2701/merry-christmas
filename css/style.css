@@ -9,7 +9,7 @@ html {
   scroll-behavior: smooth;
 }
 
-a{
+a {
   text-decoration: none;
 }
 
@@ -333,14 +333,14 @@ video {
   border-radius: 20px;
 }
 
-.icon-arrow{
+.icon-arrow {
   font-size: 35px;
 }
 
-.icon-arrow h3:hover{
+.icon-arrow h3:hover {
   opacity: 0.7;
 }
 
-#arrow2 img{
+#arrow2 img {
   width: 10%;
 }
